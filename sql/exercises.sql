@@ -44,13 +44,19 @@ from film;
 
 # 2a. Select all distinct (different) last names from the actor table.
 
+select distinct last_name
+from actor;
+
 
 # 2b. Select all distinct (different) postal codes from the address table.
 
+select distinct postal_code
+from address;
 
 # 2c. Select all distinct (different) ratings from the film table.
 
-
+select distinct rating
+from film;
 
 # ---------------------------------------------------------#
 
