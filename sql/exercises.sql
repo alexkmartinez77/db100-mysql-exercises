@@ -141,6 +141,7 @@ select
   last_update
 from staff
 where password is NULL;
+
 # ---------------------------------------------------------#
 
 
@@ -148,13 +149,27 @@ where password is NULL;
 
 # 4a. Select the phone and district columns from the address table for addresses in California, England, Taipei, or West Java.
 
+select 
+	phone,
+  district
+from address
+where district in ('California','England', 'Taipei', 'West Java');
 
 # 4b. Select the payment id, amount, and payment date columns from the payment table for payments made on 05/25/2005, 05/27/2005, and 05/29/2005.
 # (Use the IN operator and the DATE function, instead of the AND operator as in previous exercises.)
 
+select 
+	payment_id,
+  amount,
+  payment_date
+from payment
+where Date(payment_date) in ('2005-05-25', '2005-05-27', '2005-05-29');
 
 # 4c. Select all columns from the film table for films rated G, PG-13 or NC-17.
 
+select *
+from film
+where rating in ('G', 'PG-13', 'NC-17');
 
 # ---------------------------------------------------------#
 
