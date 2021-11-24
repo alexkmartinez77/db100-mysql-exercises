@@ -206,14 +206,33 @@ where length(description) between 100 and 120;
 # 6a. Select the following columns from the film table for rows where the description begins with "A Thoughtful".
 # Title, Description, Release Year
 
+select
+  title,
+  description,
+  release_year
+from film
+where description like 'A Thoughtful%';
 
 # 6b. Select the following columns from the film table for rows where the description ends with the word "Boat".
 # Title, Description, Rental Duration
 
+select
+  title,
+  description,
+  rental_duration
+from film
+where description like '%Boat';
 
 # 6c. Select the following columns from the film table where the description contains the word "Database" and the length of the film is greater than 3 hours.
 # Title, Length, Description, Rental Rate
 
+select
+  title,
+  length,
+  description,
+  rental_rate
+from film
+where description like '%Database%' and length > 180;
 
 # ---------------------------------------------------------#
 
