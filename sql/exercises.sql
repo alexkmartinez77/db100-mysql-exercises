@@ -178,6 +178,9 @@ where rating in ('G', 'PG-13', 'NC-17');
 
 # 5a. Select all columns from the payment table for payments made between midnight 05/25/2005 and 1 second before midnight 05/26/2005.
 
+select *
+from payment
+where payment_date between '2005-05-25 00:00:00' and '2005-05-25 23:59:59';
 
 # 5b. Select the following columns from the film table for films where the length of the description is between 100 and 120.
 #
@@ -187,6 +190,13 @@ where rating in ('G', 'PG-13', 'NC-17');
 # release_year          Exists in film table.
 # total_rental_cost     rental_duration * rental_rate
 
+select
+  title,
+  description,
+  release_year,
+  rental_duration * rental_rate as total_rental_cost
+from film
+where length(description) between 100 and 120;
 
 # ---------------------------------------------------------#
 
