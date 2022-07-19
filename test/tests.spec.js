@@ -1,10 +1,11 @@
 const chai = require('chai');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const fs = require('fs');
 const path = require('path');
 const async = require('async');
 const moment = require('moment');
 const config = require('../config.js');
+
 
 chai.use(require('chai-sorted'));
 chai.use(require('chai-as-promised'));
